@@ -26,7 +26,8 @@ public class JsonDemoApi {
                 header("Accept", "application/json").
                 when().get("/photos").
                 then().statusCode(200).
-                body("[0].userID" , equalTo(1) );
+                log().all().
+                body("[0].url" , equalTo("https://via.placeholder.com/600/92c952") );
 
     }
 
@@ -51,7 +52,8 @@ public class JsonDemoApi {
                 then().
                 log().all().
                 statusCode(200).
-                body("[0].userID", equalTo(1));
+                body("[4].address.geo.lat",equalTo("-31.8129"));
+
     }
 }
 
