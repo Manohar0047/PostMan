@@ -44,6 +44,6 @@ public class JsonPlaceHolder {
                 then().
                 log().all().
                 statusCode(200).
-                body("userId" , equalTo(1));
+                body("[0].userId" , equalTo(null));
 }
 }

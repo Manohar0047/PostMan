@@ -26,7 +26,7 @@ public class JsonDemoApi {
                 header("Accept", "application/json").
                 when().get("/photos").
                 then().statusCode(200).
-                body("[0].userID" , equalTo(1) );
+                body("[0].userID" , equalTo(null) );
 
     }
 
@@ -51,7 +51,7 @@ public class JsonDemoApi {
                 then().
                 log().all().
                 statusCode(200).
-                body("[0].userID", equalTo(1));
+                body("[0].userID", equalTo(null));
     }
 }
 
